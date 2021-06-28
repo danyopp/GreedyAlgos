@@ -9,7 +9,7 @@ public class ScheduleDeadline {
     //sort based on payoff
     //take shortest jobs with earliest end time
     //take jobs with earliest start time
-    
+    //Not optimal but mostly optimal
 
 
 
