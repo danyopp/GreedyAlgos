@@ -56,7 +56,7 @@ public class Job {
     }
 
     public static void sortJobListByEnd(ArrayList<Job> j){
-        Collections.sort(j, (o1, o2) -> -Integer.compare(o1.getEnd(), o2.getEnd()));
+        Collections.sort(j, (o1, o2) -> Integer.compare(o1.getEnd(), o2.getEnd()));
     }
 
     public void print(){
