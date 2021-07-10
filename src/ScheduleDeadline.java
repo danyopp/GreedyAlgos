@@ -1,4 +1,3 @@
-import java.sql.Time;
 import java.util.ArrayList;
 
 public class ScheduleDeadline {
@@ -30,11 +29,11 @@ public class ScheduleDeadline {
         }
 
         System.out.println("Greedy based on Start Time");
-        startTime greedyLength = new startTime(jList);
+        startTimeSort greedyLength = new startTimeSort(jList);
         greedyLength.Greedy();
 
         System.out.println("Greedy based on End Time");
-        endTime greedyLength2 = new endTime(jList);
+        endTimeSort greedyLength2 = new endTimeSort(jList);
         greedyLength2.Greedy();
 
 

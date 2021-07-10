@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class startTime {
+public class startTimeSort {
 
     ArrayList<Job> joblist;
 
-    startTime(ArrayList<Job> joblist){
+    startTimeSort(ArrayList<Job> joblist){
         this.joblist = new ArrayList<Job>();
         this.joblist = (ArrayList<Job>)joblist.clone();
     }
