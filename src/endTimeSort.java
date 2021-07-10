@@ -27,7 +27,7 @@ public class endTimeSort {
                 results.add(j);
             }
         }
-        System.out.println("-----------------");
+
         for(Job j : results){
             j.print();
         }

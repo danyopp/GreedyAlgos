@@ -36,6 +36,10 @@ public class ScheduleDeadline {
         endTimeSort greedyLength2 = new endTimeSort(jList);
         greedyLength2.Greedy();
 
+        System.out.println("Greedy based on Max Payout");
+        PayoffSort greedyLength3 = new PayoffSort(jList);
+        greedyLength3.Greedy();
+
 
     }
 

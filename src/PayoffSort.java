@@ -30,40 +30,55 @@ public class PayoffSort {
         for(int i = 0 ; i < startTime ; i++){
             availability[i] = true;
         }
+
+
     }
 
 
     public void Greedy(){
 
         ArrayList<Job> results = new ArrayList<Job>();
-        Job.sortJobListByStart(joblist);
-
-
+        Job.sortJobListByPayoff(joblist);
 
         int nextAvailable = -1;
         for(int i = 0; i < joblist.size(); i++){
             Job j = joblist.get(i);
-            if(nextAvailable == -1){
-                nextAvailable = j.getEnd() + 1;
-                results.add(j);
-            }
-            else if(j.getStart() >= nextAvailable){
-                nextAvailable = j.getEnd()+1;
+            if(checkIfAvailable(j.getStart(), j.getEnd())){
+                markAvailable(j.getStart(),j.getEnd());
                 results.add(j);
             }
         }
-        System.out.println("-----------------");
+
         for(Job j : results){
             j.print();
         }
+
+//        int i = 0;
+//        for(boolean b : availability){
+//            System.out.println(i + ": " + b);
+//            i++;
+//        }
     }
 
     private boolean checkIfAvailable(int start, int end){
-
+        if(availability.length < start || availability.length < end || start < 0 || end < 0){
+            throw new IllegalStateException();
+        }
+        for (int i = start; i <= end; i++){
+            if(availability[i]){
+                return false;
+            }
+        }
+        return true;
     }
 
     private void markAvailable(int start, int end){
-
+        if(availability.length < start || availability.length < end || start < 0 || end < 0){
+            throw new IllegalStateException();
+        }
+        for (int i = start; i <= end; i++){
+            availability[i] = true;
+        }
     }
 
 }
