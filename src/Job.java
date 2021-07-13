@@ -47,6 +47,10 @@ public class Job {
         Collections.sort(j, (o1, o2) -> -Integer.compare(o1.getPayoff(), o2.getPayoff()));
     }
 
+    public static void sortJobListByPayoffPerDuration(ArrayList<Job> j){
+        Collections.sort(j, (o1, o2) -> -Integer.compare(o1.getPayoff()/o1.getDuration(), o2.getPayoff()/o2.getDuration()));
+    }
+
     public static void sortJobListByDuration(ArrayList<Job> j){
         Collections.sort(j, (o1, o2) -> -Integer.compare(o1.getDuration(), o2.getDuration()));
     }

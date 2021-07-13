@@ -30,8 +30,6 @@ public class PayoffSort {
         for(int i = 0 ; i < startTime ; i++){
             availability[i] = true;
         }
-
-
     }
 
 
